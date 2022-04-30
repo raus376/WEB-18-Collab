@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #layout{
+            display: flex;
+            justify-content: center;
+            width: 40%;
+            margin: auto;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(5,auto);
+            gap: 20px;
+            margin: auto;
+            width: 70%;
+            height: auto;
+            text-align: center;
+            background-color: #00ccb0;
+            margin-top: 100px;
+            padding: 40px 50px 70px 50px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+            border-radius: 5px;
+        }
+        h1{
+            font-family: sans-serif;
+            font-weight: 200;
+            color: white;
+        }
+        input{
+            padding: 15px 15px 15px 15px;
+            border: 0px;
+            /* width: 90%; */
+        }
+        #signUp{
+            color: white;
+            background-color: #009983;
+            border: 0px;
+            /* width: 90%; */
+        }
+        #return{
+            color: white;
+            background-color: #009983;
+            border: 0px;
+        }
+        @media all and (min-width: 481px) and (max-width: 850px) {
+            #layout{
+                width: 60%;
+            }
+            #container{
+                grid-template-columns: auto;
+                width: auto;
+            }
+            input{
+            /* margin-left: 0px;
+            width: 80%; */
+            margin-left: -10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id = "layout">
+    <div id="container">
+        <h1>- Visitor -</h1>
+        <input type="text" placeholder="Full name">
+        <input type="email" placeholder="Email">
+        <input type="text" placeholder="Organization">
+        <input id="signUp" type="submit" placeholder="SIGN UP">
+        <input id="return" type="submit" placeholder="RETURN">
+    </div>
+</div>
+</body>
+</html>
