@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        #name{
+            height: 60px;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 20px;
+        /* text-align: center; */
+        padding-left: 12px;
+        }
+        #email{
+            height: 60px;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 20px;
+        /* text-align: center; */
+        padding-left: 12px;
+
+
+        }
+        #password{
+            height: 60px;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 20px;
+        /* text-align: center; */
+        padding-left: 12px;
+        margin-bottom: 10px;
+margin-top: 0%;
+/* justify-content: center; */
+        }
+        #id2{
+            margin-bottom: 10px;
+            font-size: 18px;
+            padding-right: 335px;
+
+        }
+        #id1{
+            margin-bottom: 10px;
+            font-size: 18px;
+            padding-right: 360px
+        }
+        #id{
+            margin-bottom: 10px;
+            font-size: 18px;
+            padding-right: 340px;
+        }
+        #submit{
+            height: 60px;
+            width: 420px;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+        #form{
+          text-align: center;
+        }
+        #img{
+            text-align: center;
+            height: 80px;
+            margin-bottom: 0%;
+            font-size: 60px;
+            font-family: sans-serif;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="img">Rebok</div>
+    <form action="" id="form">
+
+        <h2>Sign Up</h2>
+        <h4 id="id2">Full name</h4>
+        <input placeholder="Enter your full name" id="name" name="name" type="text" /><br>
+        <h4 id="id1">Email</h4>
+        <input placeholder="Enter your email" type="email" name="email" id="email" /> </br>
+        <h4 id="id">Password</h4>
+        <input id="password"
+          type="password"
+          placeholder="Enter password"
+        /></br>
+        <input placeholder="SIGN UP" id="submit" type="submit"  value="SIGN UP" />
+      </form>
+</body>
+</html>
+
+<script>
+    document.querySelector("#form").addEventListener("submit",clickme);
+ function   clickme(){
+     event.preventDefault();
+     var name = document.querySelector("#name").value;
+     var email = document.querySelector("#email").value;
+     var pass = document.querySelector("#password").value;
+ var arr = [];
+   var obj = {
+       main_name :name,
+       main_email:email,
+       main_pass :pass,
+
+   }
+   arr.push(obj);
+   localStorage.setItem("redirect",JSON.stringify(arr));
+   var x = arr[0];
+   if(x.main_name == name && x.main_email == email && x.main_pass == pass){
+   
+    window.location.href = "login.html";
+   }
+  
+ 
+   
+ }
+</script>

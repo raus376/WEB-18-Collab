@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        #name{
+        height: 30px;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 10px;
+        }
+        #email{
+            height: 60px;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 20px;
+        /* text-align: center; */
+        padding-left: 12px;
+        margin-bottom: 10px;
+margin-top: 0%;
+
+
+        }
+        #password{
+            height: 60px;
+            width: 400px;
+            border-radius: 10px;
+            font-size: 20px;
+        /* text-align: center; */
+        padding-left: 12px;
+        margin-bottom: 10px;
+margin-top: 0%;
+
+/* justify-content: center; */
+        }
+        #submit{
+            height: 60px;
+            width: 410px;
+            border-radius: 10px;
+            font-size: 20px;
+        /* text-align: center; */
+        padding-left: 12px;
+        /* margin-bottom: 10px; */
+margin-top:30px ;
+        }
+        #form{
+          text-align: center;
+        }
+        #id1{
+            margin-bottom: 0%;
+            padding-right: 365px;
+            margin-bottom: 10px;
+        }
+        #id2{
+            margin-bottom: 0%;
+            /* padding-right: px; */
+            margin-bottom: 10px; 
+        }
+        #id3{
+            margin-bottom: 0%;
+            padding-left: 200px;
+            
+         
+        }
+        #img{
+            text-align: center;
+            height: 80px;
+            font-size: 60px;
+            margin-bottom: 0%;
+            font-family: sans-serif;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="img">Rebok</div>
+    <form action="" id="form">
+        <h2>Sign In</h2>
+        <!-- <input placeholder="Enter Name" id="name" name="name" type="text" /><br> -->\
+        <h3 id="id1">Email</h3>
+        <input placeholder="Enter email" type="email" name="email" id="email" /> </br>
+        <h3 id="id2">Password  <span id="id3">Forgot Password</span>    </h3>
+        <input id="password"
+          type="password"
+          placeholder="password"
+        /></br>
+        <input id="submit" type="submit" name="submit" value="SIGN IN" /></form><br>
+      
+      </form>
+      
+      <p id="demo"></p>
+
+</body>
+</html>
+
+<script>
+    
+  
+    document.querySelector("#form").addEventListener("submit",findme);
+    function findme(){
+        event.preventDefault();
+
+        var name = document.querySelector("#email").value;
+        var pw = document.querySelector("#password").value;
+        // var arr = [];
+   var obj = {
+       name :name,
+      
+       pass :pw,
+
+   }
+   console.log(obj.name)
+
+//    arr.push(obj);
+//    localStorage.setItem("redirect",JSON.stringify(arr));
+
+       
+  var max = JSON.parse(localStorage.getItem("redirect"));
+// console.log(max);
+var x = max[0];
+
+if(x.main_email == obj.name){
+    if(x.main_pass == obj.pass){
+        window.location.href = "navbar.html"
+        
+        // alert("Sign in");
+
+    }
+
+
+    else{
+      alert("PLease try again");
+
+    }
+
+}
+
+
+   
+
+    // window.location.href = "index.html";
+    // window.location.href = "index.com";
+
+
+    
+
+
+ 
+
+    }
+
+</script>
